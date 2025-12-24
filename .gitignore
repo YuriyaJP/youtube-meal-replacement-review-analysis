@@ -1,0 +1,42 @@
+# create repo directory
+mkdir youtube-meal-replacement-review-analysis
+cd youtube-meal-replacement-review-analysis
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# initialize git
+git init
+
+# core structure (minimal but professional)
+mkdir -p \
+  docs/architecture \
+  src/features \
+  src/models \
+  src/evaluation \
+  data/samples \
+  notebooks \
+  scripts
+
+touch \
+  README.md \
+  docs/architecture/system_overview.md \
+  docs/architecture/data_flow.md \
+  src/features/feature_schema.py \
+  src/models/model_interface.py \
+  src/evaluation/metrics.py \
+  scripts/run_pipeline.sh \
+  .gitignore
+
+git add .
+git commit -m "Initial repo scaffold: architecture-first analysis project"
+
+
