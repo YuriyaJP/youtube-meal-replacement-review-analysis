@@ -7,10 +7,10 @@
 
 A **multimodal machine learning project** analyzing how automated content systems interpret health product narratives across multiple data modalities:
 
-- 🎥 **Video transcripts** (spoken language → text modality)
-- 💬 **User comments** (written text modality)  
-- 📊 **Engagement signals** (numerical metadata: views, likes, timestamps)
-- 🕐 **Temporal patterns** (how narratives evolve over time)
+- **Video transcripts** (spoken language → text modality)
+- **User comments** (written text modality)  
+- **Engagement signals** (numerical metadata: views, likes, timestamps)
+- **Temporal patterns** (how narratives evolve over time)
 
 **Research Question:**  
 *How do narrative trajectories differ between high-engagement content (YouTube) and community discourse (comments), and what does multimodal fusion reveal about safe consumer analytics design?*
@@ -75,6 +75,7 @@ You're **aligning two text modalities in same context**:
                                    v
                             [Interpretable Outputs]
 ---
+```
 
 ## Tech Stack
 
@@ -101,17 +102,6 @@ You're **aligning two text modalities in same context**:
 3. **Explicit uncertainty** (no definitive health claims)
 4. **Platform-as-case-study** (not product judgment)
 5. **Open methodology** (reproducible, documented)
-
----
-
-## Current Status
-
-- [x] Architecture design
-- [x] Data collection scripts (YouTube)
-- [ ] Multimodal feature extraction
-- [ ] Trajectory modeling (HMMs)
-- [ ] Safety guardrails implementation
-- [ ] Interactive visualizations
 
 ---
 
