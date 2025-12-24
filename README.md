@@ -1,43 +1,128 @@
-# YouTube Meal Replacement Review Analysis
+# Multimodal Narrative Risk Analysis: Health Product Discourse
 
-**Status:** Work in Progress  
-**Scope:** Research & analytical exploration (non-commercial)
+**Status:** Research Project (Ongoing)  
+**Focus:** Multimodal ML for consumer health discourse analysis
 
-## Overview
-This project analyzes **YouTube video reviews of meal replacement products**
-(e.g. Huel, Soylent, regional equivalents) to understand:
+## What This Is
 
-- Consumer sentiment and tradeoffs
-- Perceived health benefits vs concerns
-- Taste, convenience, price narratives
-- Longitudinal shifts in reviewer opinions
+A **multimodal machine learning project** analyzing how automated content systems interpret health product narratives across multiple data modalities:
 
-The focus is on **methodology, interpretability, and bias-aware NLP** — not scraping scale.
+- 🎥 **Video transcripts** (spoken language → text modality)
+- 💬 **User comments** (written text modality)  
+- 📊 **Engagement signals** (numerical metadata: views, likes, timestamps)
+- 🕐 **Temporal patterns** (how narratives evolve over time)
 
----
-
-## Data Source
-- Public YouTube video reviews (English)
-- Manually curated seed channels
-- Comments + creator transcripts
-
-⚠️ Raw data is not published due to platform TOS and ethical considerations.
+**Research Question:**  
+*How do narrative trajectories differ between high-engagement content (YouTube) and community discourse (comments), and what does multimodal fusion reveal about safe consumer analytics design?*
 
 ---
 
-## Methods
-- Text normalization & discourse segmentation
-- Aspect-based sentiment analysis
-- Review stance classification (pro / neutral / skeptical)
-- Temporal trend analysis across upload dates
+## Why Multimodal?
+
+Traditional unimodal analysis (text-only sentiment) misses:
+- **Temporal dynamics:** How claims escalate from hedged ("I felt bloated") to definitive ("Huel causes bloating")
+- **Engagement signals:** Rare dramatic narratives get amplified algorithmically despite low prevalence
+- **Cross-modal gaps:** What creators say ≠ what audiences hear ≠ what communities discuss
+- **Platform effects:** YouTube (performative) vs Reddit (community-validated)
+
+**This project demonstrates multimodal fusion** to detect these gaps.
 
 ---
 
-## Architecture
-See `docs/architecture/` for system-level design and data flow.
+# Multimodal Narrative Analysis: Creator Claims vs Audience Reality
+
+## Research Question
+**"When health product reviewers make claims in videos, do their audience's comments validate or contradict those claims—and what does this gap tell us about algorithmic amplification risk?"**
+
+## Modalities
+1. **Video Transcripts** (creator narrative)
+2. **Video Comments** (audience experiences)
+3. **Engagement Signals** (views, likes, comment velocity)
+4. **Temporal Patterns** (narrative evolution, comment timing)
+
+## Key Insight
+High-engagement videos with dramatic health claims often have comment sections full of:
+- "This didn't happen to me"
+- "My experience was different"
+- "Clickbait"
+
+But automated systems trained on *video content alone* would miss this validation gap.
+
+## This Is Multimodal Because:
+You're **aligning two text modalities in same context**:
+- What the creator **claims** (video)
+- What the audience **experiences** (comments)
+- Weighted by **engagement signals** (algorithmic amplification)
+- Tracked across **time** (narrative trajectory)
+
 
 ---
 
-## Disclaimer
-This project is **not a nutritional or medical evaluation**.  
-Findings reflect public opinion, not clinical evidence.
+## Data Architecture
+```
+[YouTube Videos] ────────┐
+                         ├──> [Multimodal Fusion]
+[Video Transcripts] ─────┤         |
+[User Comments] ─────────┤         v
+[Engagement Metrics] ────┤    [Trajectory Modeling]
+[Timestamps] ────────────┘         |
+                                   v
+                [Comments] ──> [Validation]
+                                   |
+                                   v
+                            [Safety Analysis]
+                                   |
+                                   v
+                            [Interpretable Outputs]
+---
+
+## Tech Stack
+
+**Multimodal ML:**
+- `sentence-transformers` (text embeddings)
+- `openai` (LLM-assisted claim extraction)
+- `hmmlearn` (temporal sequence modeling)
+- `scikit-learn` (fusion & classification)
+
+**Data Collection:**
+- `youtube-transcript-api` (transcript modality)
+- YouTube Data API (engagement modality)
+
+**Visualization:**
+- `plotly` (interactive multimodal visualizations)
+- `matplotlib` (trajectory plots)
+
+---
+
+## Ethical Considerations
+
+1. **Public data only** (no login-required content)
+2. **No personal identification** (anonymized examples)
+3. **Explicit uncertainty** (no definitive health claims)
+4. **Platform-as-case-study** (not product judgment)
+5. **Open methodology** (reproducible, documented)
+
+---
+
+## Current Status
+
+- [x] Architecture design
+- [x] Data collection scripts (YouTube)
+- [ ] Multimodal feature extraction
+- [ ] Trajectory modeling (HMMs)
+- [ ] Safety guardrails implementation
+- [ ] Interactive visualizations
+
+---
+
+## Author
+
+**Yulia Chekhovska**  
+Background: Psycholinguistics → Data Science  
+Focus: Multimodal ML for consumer health & AI safety
+
+[LinkedIn](linkedin.com/in/yuliia-che) | [Portfolio](yuriyajp.github.io)
+
+---
+
+*This project applies multimodal ML principles to health discourse, demonstrating fusion techniques and safety-aware analytics for consumer-facing AI systems.*
