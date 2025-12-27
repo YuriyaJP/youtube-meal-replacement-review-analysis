@@ -25,3 +25,12 @@ tzdata==2025.3
 uritemplate==4.2.0
 urllib3==2.6.2
 youtube-transcript-api==1.2.3
+
+
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+scipy>=1.10.0
+prophet>=1.1.0
+sklearn

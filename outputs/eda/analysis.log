@@ -1,0 +1,98 @@
+2025-12-27 22:00:33,750 | INFO | eda_analysis | Logger initialized successfully.
+2025-12-27 22:00:35,134 | INFO | __main__ | Starting EDA pipeline
+2025-12-27 22:00:35,135 | INFO | __main__ | ================================================================================
+2025-12-27 22:00:35,135 | INFO | __main__ | LOADING DATA
+2025-12-27 22:00:35,135 | INFO | __main__ | ================================================================================
+2025-12-27 22:00:35,135 | INFO | __main__ | Reading data from: ../data/raw/youtube_comments.csv
+2025-12-27 22:00:35,143 | INFO | __main__ | Successfully loaded 684 rows
+2025-12-27 22:00:35,143 | INFO | __main__ | Parsing timestamps
+2025-12-27 22:00:35,150 | INFO | __main__ | Extracting text features
+2025-12-27 22:00:35,156 | INFO | __main__ | Creating engagement features
+2025-12-27 22:00:35,160 | INFO | __main__ | 
+Dataset Overview:
+2025-12-27 22:00:35,160 | INFO | __main__ |   Total comments: 684
+2025-12-27 22:00:35,160 | INFO | __main__ |   Unique videos: 17
+2025-12-27 22:00:35,161 | INFO | __main__ |   Unique authors: 646
+2025-12-27 22:00:35,162 | INFO | __main__ |   Date range: 2020-01-31 to 2025-12-21
+2025-12-27 22:00:35,163 | INFO | __main__ |   Span: 2151 days
+2025-12-27 22:00:35,163 | INFO | __main__ | 
+================================================================================
+2025-12-27 22:00:35,163 | INFO | __main__ | 1. TEMPORAL ANALYSIS
+2025-12-27 22:00:35,164 | INFO | __main__ | ================================================================================
+2025-12-27 22:00:35,258 | INFO | __main__ | Generating comment volume time series
+2025-12-27 22:00:35,296 | INFO | __main__ | Calculating average engagement trends
+2025-12-27 22:00:35,327 | INFO | __main__ | Analyzing day of week patterns
+2025-12-27 22:00:35,350 | INFO | __main__ | Analyzing hourly patterns
+2025-12-27 22:00:36,598 | INFO | __main__ |   Saved: ../outputs/eda/01_temporal_patterns.png
+2025-12-27 22:00:36,599 | INFO | __main__ | 
+Key Findings:
+2025-12-27 22:00:36,599 | INFO | __main__ |   Peak month: 2021-01 (60 comments)
+2025-12-27 22:00:36,599 | INFO | __main__ |   Most active day: Tuesday (110 comments)
+2025-12-27 22:00:36,599 | INFO | __main__ |   Most active hour: 21:00 UTC (51 comments)
+2025-12-27 22:00:36,599 | INFO | __main__ | 
+================================================================================
+2025-12-27 22:00:36,599 | INFO | __main__ | 2. ENGAGEMENT ANALYSIS
+2025-12-27 22:00:36,599 | INFO | __main__ | ================================================================================
+2025-12-27 22:00:36,626 | INFO | __main__ | Analyzing like distribution
+2025-12-27 22:00:36,659 | INFO | __main__ | Analyzing length vs engagement correlation
+2025-12-27 22:00:36,666 | INFO | __main__ | Identifying top engaged comments
+2025-12-27 22:00:36,690 | INFO | __main__ | Calculating video-level engagement
+2025-12-27 22:00:38,370 | INFO | __main__ |   Saved: ../outputs/eda/02_engagement_patterns.png
+2025-12-27 22:00:38,370 | INFO | __main__ | 
+Key Statistics:
+2025-12-27 22:00:38,371 | INFO | __main__ |   Median likes: 1
+2025-12-27 22:00:38,371 | INFO | __main__ |   Mean likes: 6.2
+2025-12-27 22:00:38,371 | INFO | __main__ |   Comments with 0 likes: 270 (39.5%)
+2025-12-27 22:00:38,372 | INFO | __main__ |   High engagement (top 25%): 193 comments
+2025-12-27 22:00:38,372 | INFO | __main__ |   Length-engagement correlation: 0.146
+2025-12-27 22:00:38,372 | INFO | __main__ | 
+================================================================================
+2025-12-27 22:00:38,372 | INFO | __main__ | 3. CONTENT ANALYSIS
+2025-12-27 22:00:38,372 | INFO | __main__ | ================================================================================
+2025-12-27 22:00:38,372 | INFO | __main__ | Detecting themes in comments
+2025-12-27 22:00:38,482 | INFO | __main__ | Calculating theme prevalence
+2025-12-27 22:00:38,500 | INFO | __main__ | Analyzing text length distribution
+2025-12-27 22:00:38,529 | INFO | __main__ | Analyzing punctuation patterns
+2025-12-27 22:00:38,544 | INFO | __main__ | Identifying active commenters
+2025-12-27 22:00:39,968 | INFO | __main__ |   Saved: ../outputs/eda/03_content_analysis.png
+2025-12-27 22:00:39,968 | INFO | __main__ | 
+Key Findings:
+2025-12-27 22:00:39,969 | INFO | __main__ |   Most discussed theme: eating_disorder (326 mentions)
+2025-12-27 22:00:39,969 | INFO | __main__ |   Average comment length: 36.3 words
+2025-12-27 22:00:39,969 | INFO | __main__ |   Median comment length: 22 words
+2025-12-27 22:00:39,970 | INFO | __main__ |   Comments with questions: 110 (16.1%)
+2025-12-27 22:00:39,971 | INFO | __main__ |   Repeat commenters: 25
+2025-12-27 22:00:39,971 | INFO | __main__ | 
+================================================================================
+2025-12-27 22:00:39,971 | INFO | __main__ | 4. TEXT VISUALIZATION
+2025-12-27 22:00:39,971 | INFO | __main__ | ================================================================================
+2025-12-27 22:00:40,155 | INFO | __main__ | Generating word cloud
+2025-12-27 22:00:41,674 | INFO | __main__ | Extracting top frequent words
+2025-12-27 22:00:42,835 | INFO | __main__ |   Saved: ../outputs/eda/04_word_analysis.png
+2025-12-27 22:00:42,835 | INFO | __main__ |   Top 5 words: video, weight, food, meal, great
+2025-12-27 22:00:42,836 | INFO | __main__ | 
+================================================================================
+2025-12-27 22:00:42,836 | INFO | __main__ | 5. COMPARATIVE ANALYSIS
+2025-12-27 22:00:42,836 | INFO | __main__ | ================================================================================
+2025-12-27 22:00:42,967 | INFO | __main__ | Comparing high vs low engagement comments
+2025-12-27 22:00:42,987 | INFO | __main__ | Analyzing theme impact on engagement
+2025-12-27 22:00:43,022 | INFO | __main__ | Performing year-over-year analysis
+2025-12-27 22:00:43,041 | INFO | __main__ | Comparing top videos
+2025-12-27 22:00:44,249 | INFO | __main__ |   Saved: ../outputs/eda/05_comparative_analysis.png
+2025-12-27 22:00:44,250 | INFO | __main__ | 
+Key Comparisons:
+2025-12-27 22:00:44,250 | INFO | __main__ |   High engagement comments: 193 (28.2%)
+2025-12-27 22:00:44,250 | INFO | __main__ |   Avg word count (high eng): 48.5
+2025-12-27 22:00:44,250 | INFO | __main__ |   Avg word count (low eng): 31.6
+2025-12-27 22:00:44,250 | INFO | __main__ | 
+================================================================================
+2025-12-27 22:00:44,251 | INFO | __main__ | 6. CORRELATION ANALYSIS
+2025-12-27 22:00:44,251 | INFO | __main__ | ================================================================================
+2025-12-27 22:00:44,251 | INFO | __main__ | Computing correlation matrix
+2025-12-27 22:00:44,782 | INFO | __main__ |   Saved: ../outputs/eda/06_correlation_matrix.png
+2025-12-27 22:00:44,782 | INFO | __main__ | 
+Strongest Correlations:
+2025-12-27 22:00:44,782 | INFO | __main__ |   text_length <-> word_count: 0.995
+2025-12-27 22:00:44,782 | INFO | __main__ |   like_count <-> text_length: 0.146
+2025-12-27 22:00:44,783 | INFO | __main__ |   like_count <-> word_count: 0.146
+2025-12-27 22:00:44,789 | INFO | __main__ | EDA pipeline completed successfully.

@@ -6,6 +6,8 @@ cd youtube-meal-replacement-review-analysis
 venv/
 env/
 youtube_review_analysis_env/
+.env
+
 
 # Python cache
 __pycache__/
